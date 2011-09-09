@@ -1,0 +1,7 @@
+# basic ignores
+.DS_Store
+layers/
+tmp/
+BlueLake*
+layers/
+style.mss
