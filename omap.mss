@@ -1,29 +1,44 @@
 /*-------------Colors-------------*/
+@black: rgb(0,0,0);
+@brown: rgb(188,94,30); 			// PMS471
+@brown_50: rgba(188,94,30,0.5); 	// PMS471
+@yellow: rgb(252,191,73); 			// PMS136
+@yellow_50: rgba(252,191,73,0.5); 	// PMS136
+@blue: rgb(0,163,221);				// PMS299
+@green: rgb(30,181,58); 			// PMS361
+@green_30: rgba(30,181,58,0.3); 	// PMS361
+@green_60: rgba(30,181,58,0.6); 	// PMS361
+@grey: rgb(209,206,198); 			// PMS428
 
-/*Line colors*/
-@contour: brown;
-@foot_path: #000;
-@mag_lines: cyan;
-@control_line: magenta;
-@rough_open: #ffd345;
-@open_land: #e3bb38;
-@major_road: brown;
-@lake: #85c5d4; /*301 Lake*/
-  
-/*Area colors*/
-@vegetation_thick: green;
 
 /*-------------Styles-------------*/
-/*Point styles*/
-.bl-area[SYMBOL=410] {polygon-fill: @vegetation_thick;}
+.o_areas[SYMBOL=401] {polygon-fill: @yellow;} 		// 401 Open land
+.o_areas[SYMBOL=402] {polygon-fill: @yellow_50;} 	// 402 Open land with scattered trees
+.o_areas[SYMBOL=403] {polygon-fill: @yellow_50;} 	// 403 Rough open land
+.o_areas[SYMBOL=406] {polygon-fill: @green_30;}
+.o_areas[SYMBOL=408] {polygon-fill: @green_60;}
+.o_areas[SYMBOL=410] {polygon-fill: @green;}
+.o_areas[SYMBOL=530] {polygon-fill: @brown_50;}
 
-/*Line styles*/
-.bl-line[SYMBOL=601.001] {line-color: @mag_lines;}
-.bl-line[SYMBOL=506] {line-color: @foot_path; line-width: 2; line-dasharray:5,3;}
-.bl-line[SYMBOL=502] {line-color: @major_road;line-width: 4;}
+.o_lines {line-color: @grey;} // for unstyled features
+.o_lines[SYMBOL=101] {line-color: @brown;}
+.o_lines[SYMBOL=533.001] {line-color: @black;}
+.o_lines[SYMBOL=301.001] {line-color: @black;}
+.o_lines[SYMBOL=102] {line-color: @brown; line-width:1.75}
+.o_lines[SYMBOL=103] {line-color: @brown; line-dasharray:3,2}
+.o_lines[SYMBOL=307] {line-color: @blue; line-dasharray:3,2}
 
-/*Area styles*/
-.bl-area[SYMBOL=410] {polygon-fill: @vegetation_thick;}
-.bl-area[SYMBOL=404] {polygon-fill: @rough_open;}
-.bl-area[SYMBOL=401] {polygon-fill: @open_land;}
-.bl-area[SYMBOL=301] {polygon-fill: @lake;}
+.o_points {marker-fill: @grey; marker-width:2;} // for unstyled features
+.o_points[SYMBOL=206] {marker-fill: @black; marker-width:4;}
+.o_points[SYMBOL=210] {marker-fill: @black; marker-width:6;}
+.o_points[SYMBOL=112] {marker-fill: @brown; marker-width:4;}
+.o_points[SYMBOL=112] {marker-fill: @brown; marker-width:4;}
+
+
+/*
+#o_text {        
+  text-name: [TEXT1];
+  text-face-name: 'Futura Condensed Medium';
+  text-size: 10;
+}
+*/

@@ -1,0 +1,127 @@
+{
+  "bounds": [
+    -0.0219,
+    -0.0155,
+    0.0123,
+    0.0182
+  ],
+  "center": [
+    -0.0043,
+    0.0019,
+    15
+  ],
+  "format": "png",
+  "interactivity": {
+    "layer": "o_area",
+    "template_teaser": "Area Symbol: {{{SYMBOL}}}",
+    "fields": [
+      "SYMBOL"
+    ]
+  },
+  "minzoom": 15,
+  "maxzoom": 17,
+  "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+  "Stylesheet": [
+    "style.mss",
+    "omap.mss"
+  ],
+  "Layer": [
+    {
+      "id": "countries",
+      "name": "countries",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "geometry": "polygon",
+      "Datasource": {
+        "file": "http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.4.0/cultural/10m-admin-0-countries.zip",
+        "type": "shape",
+        "id": "countries",
+        "project": "ISOM",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      }
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -0.01961830748988623,
+        -0.014770998053166635,
+        0.009261630579272265,
+        0.01842893773594307
+      ],
+      "id": "o_area",
+      "class": "o_areas",
+      "Datasource": {
+        "file": "/Users/grafa/Dropbox/GIS/DATA/omaps/OrienteeringMap_ar.shp"
+      },
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "o_area"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -0.01961830748988623,
+        -0.014770998053166635,
+        0.009261630579272265,
+        0.01842893773594307
+      ],
+      "id": "o_line",
+      "class": "o_lines",
+      "Datasource": {
+        "file": "/Users/grafa/Dropbox/GIS/DATA/omaps/OrienteeringMap_ln.shp",
+        "id": "o_line",
+        "project": "ISOM",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "o_line"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -0.01961830748988623,
+        -0.014770998053166635,
+        0.009261630579272265,
+        0.01842893773594307
+      ],
+      "id": "o_point",
+      "class": "o_points",
+      "Datasource": {
+        "file": "/Users/grafa/Dropbox/GIS/DATA/omaps/OrienteeringMap_pt.shp"
+      },
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "o_point"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -0.01961830748988623,
+        -0.014770998053166635,
+        0.009261630579272265,
+        0.01842893773594307
+      ],
+      "id": "o_text",
+      "class": "o_texts",
+      "Datasource": {
+        "file": "/Users/grafa/Dropbox/GIS/DATA/omaps/OrienteeringMap_tx.shp",
+        "id": "o_text",
+        "project": "ISOM",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "o_text"
+    }
+  ],
+  "scale": 1,
+  "metatile": 2,
+  "name": "ISOM",
+  "description": "This is a proof of concept for converting a sample OCAD map to Tilemill. While the international specifications of orienteering maps  (ISOM) were not created with the web in mind, this is still an attempt to represent the style of orienteering maps using ISOM as a guide. The goal is to have cleaner base maps true to the original paper map with all the benefits of using a javascript framework like Leaflet or Mapboxjs to overlay routes of orienteers post event. In addition, the basemap will have all the metadata attached to every feature through Tilemill's interactivity.",
+  "legend": "",
+  "attribution": ""
+}
